@@ -5,23 +5,36 @@ import { useEffect, useState } from 'react';
 
 export default function BackgroundAnimation() {
   const [dimensions, setDimensions] = useState({ width: 1920, height: 1080 });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = window.innerWidth < 768 || 'ontouchstart' in window;
+    setIsMobile(checkMobile);
+    
+    if (checkMobile) return; // Exit early on mobile
+    
     setDimensions({
       width: window.innerWidth,
       height: window.innerHeight,
     });
 
     const handleResize = () => {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
+      const mobile = window.innerWidth < 768 || 'ontouchstart' in window;
+      setIsMobile(mobile);
+      if (!mobile) {
+        setDimensions({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Don't render anything on mobile
+  if (isMobile) return null;
 
   // Generate random asteroids
   const asteroids = Array.from({ length: 20 }, (_, i) => ({
