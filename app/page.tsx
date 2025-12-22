@@ -9,6 +9,7 @@ import SkillsTab from './components/SkillsTab';
 import ExperienceTab from './components/ExperienceTab';
 import DomainsTab from './components/DomainsTab';
 import ContactTab from './components/ContactTab';
+import DisableAnimationsOnMobile from './components/DisableAnimationsOnMobile';
 
 const CursorFollower = dynamic(() => import('./components/CursorFollower'), { ssr: false });
 const BackgroundAnimation = dynamic(() => import('./components/BackgroundAnimation'), { ssr: false });
@@ -43,6 +44,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20">
+      {/* Disable animations on mobile */}
+      <DisableAnimationsOnMobile />
+      
       {/* Animated Background */}
       <BackgroundAnimation />
       
