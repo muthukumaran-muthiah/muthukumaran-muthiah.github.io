@@ -1,8 +1,28 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export default function BackgroundAnimation() {
+  const [dimensions, setDimensions] = useState({ width: 1920, height: 1080 });
+
+  useEffect(() => {
+    setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Generate random asteroids
   const asteroids = Array.from({ length: 20 }, (_, i) => ({
     id: i,
@@ -43,8 +63,8 @@ export default function BackgroundAnimation() {
               width: asteroid.size,
               height: asteroid.size,
               background: `radial-gradient(circle at 30% 30%, 
-                rgba(168, 85, 247, ${0.15 + Math.random() * 0.1}) 0%, 
-                rgba(59, 130, 246, ${0.1 + Math.random() * 0.1}) 50%, 
+                rgba(1dimensions.width + 100],
+            y: [-50, dimensions.h ${0.1 + Math.random() * 0.1}) 50%, 
                 transparent 70%)`,
               boxShadow: `0 0 ${asteroid.size}px rgba(168, 85, 247, 0.3)`,
               filter: 'blur(8px)',

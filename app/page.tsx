@@ -2,14 +2,16 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import TabNavigation from './components/TabNavigation';
 import AboutTab from './components/AboutTab';
 import SkillsTab from './components/SkillsTab';
 import ExperienceTab from './components/ExperienceTab';
 import DomainsTab from './components/DomainsTab';
 import ContactTab from './components/ContactTab';
-import CursorFollower from './components/CursorFollower';
-import BackgroundAnimation from './components/BackgroundAnimation';
+
+const CursorFollower = dynamic(() => import('./components/CursorFollower'), { ssr: false });
+const BackgroundAnimation = dynamic(() => import('./components/BackgroundAnimation'), { ssr: false });
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('about');
