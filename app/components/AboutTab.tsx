@@ -83,31 +83,132 @@ export default function AboutTab() {
           I specialize in building scalable, high-performance applications with a strong emphasis on 
           cloud technologies and agile methodologies.
         </p>
-        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Currently serving as a Senior Software Engineer, I lead development teams to enhance 
           application performance and reliability through modern architectural practices including 
           Event Sourcing, CQRS, and microservices architecture.
         </p>
+        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          My expertise spans across the entire technology stack, from designing intuitive user 
+          interfaces with Angular, Vue.js, and React, to architecting robust backend systems using 
+          PHP, Node.js, and various database technologies. I'm passionate about implementing DevOps 
+          practices, containerization with Docker and Kubernetes, and leveraging AWS cloud services 
+          to deliver scalable solutions.
+        </p>
+      </motion.div>
+
+      <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-6">
+        <motion.div
+          className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
+          whileHover={{ scale: 1.03, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
+        >
+          <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+            <span>🚀</span> What I Do
+          </h3>
+          <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+            <li className="flex items-start gap-2">
+              <span className="text-purple-600">•</span>
+              <span>Design and develop full-stack web applications with modern frameworks</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-purple-600">•</span>
+              <span>Implement cloud-native solutions using AWS, Docker, and Kubernetes</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-purple-600">•</span>
+              <span>Lead technical teams and mentor junior developers</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-purple-600">•</span>
+              <span>Architect scalable microservices and RESTful APIs</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-purple-600">•</span>
+              <span>Optimize application performance and database queries</span>
+            </li>
+          </ul>
+        </motion.div>
+
+        <motion.div
+          className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
+          whileHover={{ scale: 1.03, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
+        >
+          <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+            <span>💡</span> My Approach
+          </h3>
+          <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+            <li className="flex items-start gap-2">
+              <span className="text-blue-600">•</span>
+              <span>Write clean, maintainable, and well-documented code</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-blue-600">•</span>
+              <span>Follow agile methodologies and best practices</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-blue-600">•</span>
+              <span>Emphasize test-driven development and code quality</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-blue-600">•</span>
+              <span>Collaborate effectively with cross-functional teams</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-blue-600">•</span>
+              <span>Continuously learn and adapt to new technologies</span>
+            </li>
+          </ul>
+        </motion.div>
       </motion.div>
 
       <motion.div variants={itemVariants} className="grid md:grid-cols-3 gap-6">
         {[
-          { icon: '💼', title: 'Experience', value: '7+ Years' },
-          { icon: '🎓', title: 'Education', value: 'B.E/B.Tech' },
-          { icon: '🌍', title: 'Location', value: 'Chennai, India' },
+          { icon: '💼', title: 'Experience', value: '7+ Years', desc: 'Professional Development' },
+          { icon: '🎓', title: 'Education', value: 'B.E/B.Tech', desc: 'Engineering Degree' },
+          { icon: '🌍', title: 'Location', value: 'Chennai, India', desc: 'Based in' },
         ].map((item, index) => (
           <motion.div
             key={index}
-            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg text-center"
-            whileHover={{ y: -10, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)' }}
+            className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-6 rounded-xl shadow-lg text-center"
+            whileHover={{ 
+              y: -10, 
+              boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.2)',
+              rotateX: 5,
+            }}
           >
-            <div className="text-4xl mb-3">{item.icon}</div>
+            <motion.div 
+              className="text-5xl mb-3"
+              whileHover={{ scale: 1.2, rotate: 360 }}
+              transition={{ duration: 0.5 }}
+            >
+              {item.icon}
+            </motion.div>
             <h3 className="font-semibold text-gray-600 dark:text-gray-400 mb-1">
               {item.title}
             </h3>
-            <p className="text-xl font-bold text-gray-900 dark:text-white">{item.value}</p>
+            <p className="text-2xl font-bold text-gray-900 dark:text-white mb-1">{item.value}</p>
+            <p className="text-sm text-gray-500 dark:text-gray-500">{item.desc}</p>
           </motion.div>
         ))}
+      </motion.div>
+
+      <motion.div
+        variants={itemVariants}
+        className="bg-gradient-to-r from-purple-600 to-blue-600 p-8 rounded-2xl shadow-xl text-white text-center"
+      >
+        <h3 className="text-2xl font-bold mb-4">Let's Build Something Amazing Together</h3>
+        <p className="text-lg mb-6 text-purple-100">
+          I'm always interested in hearing about new projects and opportunities. 
+          Whether you have a question or just want to say hi, feel free to reach out!
+        </p>
+        <motion.button
+          className="px-8 py-3 bg-white text-purple-600 font-semibold rounded-full shadow-lg"
+          whileHover={{ scale: 1.05, boxShadow: '0 20px 25px -5px rgba(255, 255, 255, 0.3)' }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => window.location.href = 'mailto:kumaranpassion2work@outlook.in'}
+        >
+          Get In Touch
+        </motion.button>
       </motion.div>
     </motion.div>
   );

@@ -37,7 +37,6 @@ const itemVariants = {
 const experiences = [
   {
     title: 'Senior Software Engineer',
-    company: 'Learnship Technologies Private Limited',
     period: 'Dec 2022 - Present',
     description: 'Leading development teams and building cutting-edge solutions',
     achievements: [
@@ -52,7 +51,6 @@ const experiences = [
   },
   {
     title: 'System Analyst',
-    company: 'QedtekIN Private Limited, ODC',
     period: 'Apr 2022 - Dec 2022',
     description: 'System design and stakeholder management',
     achievements: [
@@ -65,7 +63,6 @@ const experiences = [
   },
   {
     title: 'Programmer Analyst',
-    company: 'QedtekIN Private Limited, ODC',
     period: 'Jan 2020 - Mar 2022',
     description: 'Full-stack development and system implementation',
     achievements: [
@@ -78,7 +75,6 @@ const experiences = [
   },
   {
     title: 'Programmer Analyst Trainee',
-    company: 'QedtekIN Private Limited, ODC',
     period: 'Nov 2018 - Jan 2020',
     description: 'Starting career with full-stack development projects',
     achievements: [
@@ -150,9 +146,6 @@ export default function ExperienceTab() {
               </p>
               <p className="text-gray-600 dark:text-gray-400 mb-4">{exp.description}</p>
 
-              <div className="space-y-2 mb-4">
-                {exp.achievements.map((achievement, i) => (
-                  <motion.div
                     key={i}
                     className="flex items-start gap-2"
                     initial={{ opacity: 0, x: -20 }}
