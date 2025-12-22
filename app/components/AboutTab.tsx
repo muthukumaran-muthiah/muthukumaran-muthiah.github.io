@@ -44,7 +44,7 @@ export default function AboutTab() {
     >
       <motion.div variants={itemVariants} className="text-center">
         <motion.div
-          className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 flex items-center justify-center text-6xl text-white shadow-2xl"
+          className="w-32 h-32 mx-auto mb-6 rounded-full shadow-2xl overflow-hidden border-4 border-gradient-to-br from-purple-600 to-blue-600"
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ 
@@ -60,7 +60,11 @@ export default function AboutTab() {
           }}
           whileTap={{ scale: 0.95 }}
         >
-          👨‍💻
+          <img 
+            src="https://github.com/muthukumaran-muthiah.png" 
+            alt="Muthukumaran Muthiah"
+            className="w-full h-full object-cover"
+          />
         </motion.div>
         <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
           Muthukumaran Muthiah
