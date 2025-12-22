@@ -1,7 +1,9 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "muthukumaran-portfolio",
+  "version": "1.0.0",
   "private": true,
+  "author": "Muthukumaran Muthiah",
+  "description": "Portfolio website showcasing skills, experience, and expertise in full-stack development",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
