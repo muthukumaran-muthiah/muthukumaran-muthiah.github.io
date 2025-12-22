@@ -75,10 +75,10 @@ export default function ContactTab() {
     >
       <motion.div variants={itemVariants} className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-          Let's Connect
+          Connect With Me
         </h2>
         <p className="text-gray-600 dark:text-gray-400 text-lg">
-          Feel free to reach out for collaborations or opportunities
+          Open to discussing technical challenges, architecture design, and innovative solutions
         </p>
       </motion.div>
 
@@ -115,18 +115,27 @@ export default function ContactTab() {
         variants={itemVariants}
         className="mt-12 bg-gradient-to-r from-purple-600 to-blue-600 p-8 rounded-2xl text-white text-center shadow-2xl max-w-4xl mx-auto"
       >
-        <h3 className="text-2xl font-bold mb-4">Open to Opportunities</h3>
-        <p className="text-lg mb-4">
-          I'm currently available for freelance projects and full-time positions
+        <h3 className="text-2xl font-bold mb-4">Technical Expertise</h3>
+        <p className="text-lg mb-6">
+          Specialized in building scalable cloud-native applications with modern microservices architecture
         </p>
-        <motion.div
-          className="inline-flex gap-2"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <span className="text-2xl">📩</span>
-          <span className="text-xl font-semibold">Let's build something amazing together!</span>
-        </motion.div>
+        <div className="grid md:grid-cols-3 gap-4 text-sm">
+          <div className="bg-white/10 rounded-lg p-4">
+            <div className="text-3xl mb-2">☁️</div>
+            <div className="font-semibold">Cloud Architecture</div>
+            <div className="opacity-90 mt-1">AWS, Kubernetes, Docker</div>
+          </div>
+          <div className="bg-white/10 rounded-lg p-4">
+            <div className="text-3xl mb-2">⚡</div>
+            <div className="font-semibold">Full-Stack Development</div>
+            <div className="opacity-90 mt-1">PHP, Node.js, Angular, React</div>
+          </div>
+          <div className="bg-white/10 rounded-lg p-4">
+            <div className="text-3xl mb-2">🏗️</div>
+            <div className="font-semibold">System Design</div>
+            <div className="opacity-90 mt-1">Event Sourcing, CQRS, APIs</div>
+          </div>
+        </div>
       </motion.div>
     </motion.div>
   );

@@ -196,19 +196,25 @@ export default function AboutTab() {
         variants={itemVariants}
         className="bg-gradient-to-r from-purple-600 to-blue-600 p-8 rounded-2xl shadow-xl text-white text-center"
       >
-        <h3 className="text-2xl font-bold mb-4">Let's Build Something Amazing Together</h3>
+        <h3 className="text-2xl font-bold mb-4">Proven Track Record</h3>
         <p className="text-lg mb-6 text-purple-100">
-          I'm always interested in hearing about new projects and opportunities. 
-          Whether you have a question or just want to say hi, feel free to reach out!
+          7+ years of delivering enterprise-grade solutions across diverse industries. 
+          Expertise in modernizing legacy systems and implementing scalable cloud architectures.
         </p>
-        <motion.button
-          className="px-8 py-3 bg-white text-purple-600 font-semibold rounded-full shadow-lg"
-          whileHover={{ scale: 1.05, boxShadow: '0 20px 25px -5px rgba(255, 255, 255, 0.3)' }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => window.location.href = 'mailto:kumaranpassion2work@outlook.in'}
-        >
-          Get In Touch
-        </motion.button>
+        <div className="grid md:grid-cols-3 gap-4 text-sm">
+          <div className="bg-white/20 rounded-lg p-3">
+            <div className="text-2xl mb-1">🎯</div>
+            <div className="font-semibold">Project Leadership</div>
+          </div>
+          <div className="bg-white/20 rounded-lg p-3">
+            <div className="text-2xl mb-1">⚙️</div>
+            <div className="font-semibold">DevOps & CI/CD</div>
+          </div>
+          <div className="bg-white/20 rounded-lg p-3">
+            <div className="text-2xl mb-1">📈</div>
+            <div className="font-semibold">Performance Optimization</div>
+          </div>
+        </div>
       </motion.div>
     </motion.div>
   );

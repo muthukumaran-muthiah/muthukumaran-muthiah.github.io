@@ -8,6 +8,8 @@ import SkillsTab from './components/SkillsTab';
 import ExperienceTab from './components/ExperienceTab';
 import DomainsTab from './components/DomainsTab';
 import ContactTab from './components/ContactTab';
+import CursorFollower from './components/CursorFollower';
+import BackgroundAnimation from './components/BackgroundAnimation';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('about');
@@ -39,46 +41,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20">
-      {/* Animated Background Blobs */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-0 left-0 w-96 h-96 bg-purple-300 dark:bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
-          animate={{
-            x: [0, 100, 0],
-            y: [0, 50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-        <motion.div
-          className="absolute top-0 right-0 w-96 h-96 bg-blue-300 dark:bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
-          animate={{
-            x: [0, -100, 0],
-            y: [0, 100, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-        <motion.div
-          className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-300 dark:bg-pink-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
-          animate={{
-            x: [-50, 50, -50],
-            y: [0, -50, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-      </div>
-
+      {/* Animated Background */}
+      <BackgroundAnimation />
+      
+      {/* Custom Cursor Follower */}
+      <CursorFollower />
+      
       {/* Main Content */}
       <main className="relative z-10 container mx-auto px-4 py-8 md:py-12">
         <motion.div
