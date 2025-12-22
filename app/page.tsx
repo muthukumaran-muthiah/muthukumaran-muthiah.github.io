@@ -10,6 +10,7 @@ import ExperienceTab from './components/ExperienceTab';
 import DomainsTab from './components/DomainsTab';
 import ContactTab from './components/ContactTab';
 import DisableAnimationsOnMobile from './components/DisableAnimationsOnMobile';
+import RocketScrollToTop from './components/RocketScrollToTop';
 
 const CursorFollower = dynamic(() => import('./components/CursorFollower'), { ssr: false });
 const BackgroundAnimation = dynamic(() => import('./components/BackgroundAnimation'), { ssr: false });
@@ -78,15 +79,8 @@ export default function Home() {
         </AnimatePresence>
       </main>
 
-      {/* Floating Action Button */}
-      <motion.button
-        className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center text-2xl z-50"
-        whileHover={{ scale: 1.1, rotate: 90 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      >
-        ⬆️
-      </motion.button>
+      {/* Rocket Scroll to Top */}
+      <RocketScrollToTop />
     </div>
   );
 }
