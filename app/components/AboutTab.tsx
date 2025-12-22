@@ -164,7 +164,7 @@ export default function AboutTab() {
       <motion.div variants={itemVariants} className="grid md:grid-cols-3 gap-6">
         {[
           { icon: '💼', title: 'Experience', value: '7+ Years', desc: 'Professional Development' },
-          { icon: '🎓', title: 'Education', value: 'B.E/B.Tech', desc: 'Engineering Degree' },
+          { icon: '🎓', title: 'Education', value: 'B.Tech', desc: 'Engineering Degree' },
           { icon: '🌍', title: 'Location', value: 'Chennai, India', desc: 'Based in' },
         ].map((item, index) => (
           <motion.div
