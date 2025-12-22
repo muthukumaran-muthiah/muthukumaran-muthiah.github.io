@@ -44,14 +44,8 @@ export default function TabNavigation({ activeTab, setActiveTab, tabs }: TabNavi
         ))}
       </nav>
 
-      {/* Mobile Breadcrumb/Dropdown Navigation */}
+      {/* Mobile Dropdown Navigation */}
       <div className="md:hidden mb-8">
-        <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-2">
-          <span>Portfolio</span>
-          <span>/</span>
-          <span className="text-purple-600 dark:text-purple-400 font-medium">{currentTab?.label}</span>
-        </div>
-        
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
           className="w-full px-4 py-3 bg-white dark:bg-gray-800 rounded-lg shadow-md flex items-center justify-between"
