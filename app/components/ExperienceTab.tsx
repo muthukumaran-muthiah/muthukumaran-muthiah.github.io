@@ -141,11 +141,11 @@ export default function ExperienceTab() {
               <h3 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">
                 {exp.title}
               </h3>
-              <p className="text-lg text-purple-600 dark:text-purple-400 mb-4 font-semibold">
-                {exp.company}
-              </p>
               <p className="text-gray-600 dark:text-gray-400 mb-4">{exp.description}</p>
 
+              <div className="space-y-2 mb-4">
+                {exp.achievements.map((achievement, i) => (
+                  <motion.div
                     key={i}
                     className="flex items-start gap-2"
                     initial={{ opacity: 0, x: -20 }}
