@@ -43,29 +43,106 @@ export default function AboutTab() {
       className="space-y-8"
     >
       <motion.div variants={itemVariants} className="text-center">
-        <motion.div
-          className="w-32 h-32 mx-auto mb-6 rounded-full shadow-2xl overflow-hidden border-4 border-gradient-to-br from-purple-600 to-blue-600"
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ 
-            type: 'spring',
-            damping: 15,
-            stiffness: 200,
-            delay: 0.3,
-          }}
-          whileHover={{ 
-            scale: 1.15,
-            rotate: [0, -10, 10, -10, 0],
-            transition: { duration: 0.5 },
-          }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <img 
-            src="https://github.com/muthukumaran-muthiah.png" 
-            alt="Muthukumaran Muthiah"
-            className="w-full h-full object-cover"
+        <div className="relative w-32 h-32 mx-auto mb-6">
+          {/* Rotating orbital rings */}
+          <motion.div
+            className="absolute inset-0 rounded-full border-2 border-purple-400/30"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
+            style={{ scale: 1.3 }}
           />
-        </motion.div>
+          <motion.div
+            className="absolute inset-0 rounded-full border-2 border-blue-400/30"
+            animate={{ rotate: -360 }}
+            transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
+            style={{ scale: 1.5 }}
+          />
+          
+          {/* Floating particles around */}
+          {[...Array(8)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full"
+              style={{
+                left: '50%',
+                top: '50%',
+              }}
+              animate={{
+                x: [0, Math.cos((i * Math.PI * 2) / 8) * 80, 0],
+                y: [0, Math.sin((i * Math.PI * 2) / 8) * 80, 0],
+                scale: [0, 1, 0],
+                opacity: [0, 1, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                delay: i * 0.2,
+                ease: 'easeInOut',
+              }}
+            />
+          ))}
+
+          {/* Pulsing glow effect */}
+          <motion.div
+            className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-600/20 to-blue-600/20 blur-xl"
+            animate={{
+              scale: [1, 1.4, 1],
+              opacity: [0.3, 0.6, 0.3],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+            }}
+          />
+
+          {/* Profile image */}
+          <motion.div
+            className="relative w-32 h-32 rounded-full shadow-2xl overflow-hidden border-4 border-white dark:border-gray-800 bg-white"
+            initial={{ scale: 0, rotate: -180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ 
+              type: 'spring',
+              damping: 15,
+              stiffness: 200,
+              delay: 0.3,
+            }}
+            whileHover={{ 
+              scale: 1.15,
+              rotate: [0, -10, 10, -10, 0],
+              transition: { duration: 0.5 },
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <img 
+              src="https://github.com/muthukumaran-muthiah.png" 
+              alt="Muthukumaran Muthiah"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+
+          {/* Sparkle effects */}
+          {[...Array(4)].map((_, i) => (
+            <motion.div
+              key={`sparkle-${i}`}
+              className="absolute w-1 h-1 bg-white rounded-full"
+              style={{
+                left: `${25 + i * 20}%`,
+                top: `${25 + i * 15}%`,
+              }}
+              animate={{
+                scale: [0, 1.5, 0],
+                opacity: [0, 1, 0],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                delay: i * 0.5,
+                ease: 'easeInOut',
+              }}
+            />
+          ))}
+        </div>
         <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
           Muthukumaran Muthiah
         </h1>
