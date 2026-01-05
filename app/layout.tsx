@@ -18,6 +18,10 @@ const experience = getExperience();
 export const metadata: Metadata = {
   title: "Muthukumaran Muthiah - Senior Software Engineer",
   description: `Portfolio of Muthukumaran Muthiah, a Senior Software Engineer with ${experience.detailed} of experience in Full-Stack Development, Cloud Architecture, and Microservices`,
+  icons: {
+    icon: 'https://github.com/muthukumaran-muthiah.png',
+    apple: 'https://github.com/muthukumaran-muthiah.png',
+  },
 };
 
 export default function RootLayout({
