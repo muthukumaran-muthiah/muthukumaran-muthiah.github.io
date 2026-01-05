@@ -163,7 +163,7 @@ export default function AboutTab() {
         </h2>
         <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
           Dynamic and results-driven Full-Stack Developer with a robust focus on web technologies 
-          and cloud platforms. With over {experience.shortForm} of comprehensive experience in software development, 
+          and cloud platforms. With over {experience.detailed} of comprehensive experience in software development, 
           I specialize in building scalable, high-performance applications with a strong emphasis on 
           cloud technologies and agile methodologies.
         </p>
@@ -282,7 +282,7 @@ export default function AboutTab() {
       >
         <h3 className="text-2xl font-bold mb-4">Proven Track Record</h3>
         <p className="text-lg mb-6 text-purple-100">
-          {experience.shortForm} of delivering enterprise-grade solutions across diverse industries. 
+          {experience.detailed} of delivering enterprise-grade solutions across diverse industries. 
           Expertise in modernizing legacy systems and implementing scalable cloud architectures.
         </p>
         <div className="grid md:grid-cols-3 gap-4 text-sm">
