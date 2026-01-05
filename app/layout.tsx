@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { getExperience } from "./utils/experience";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,9 +13,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const experience = getExperience();
+
 export const metadata: Metadata = {
   title: "Muthukumaran Muthiah - Senior Software Engineer",
-  description: "Portfolio of Muthukumaran Muthiah, a Senior Software Engineer with 7+ years of experience in Full-Stack Development, Cloud Architecture, and Microservices",
+  description: `Portfolio of Muthukumaran Muthiah, a Senior Software Engineer with ${experience.shortForm} of experience in Full-Stack Development, Cloud Architecture, and Microservices`,
 };
 
 export default function RootLayout({
