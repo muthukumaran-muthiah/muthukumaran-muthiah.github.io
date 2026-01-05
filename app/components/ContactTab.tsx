@@ -128,7 +128,7 @@ export default function ContactTab() {
           <div className="bg-white/10 rounded-lg p-4">
             <div className="text-3xl mb-2">⚡</div>
             <div className="font-semibold">Full-Stack Development</div>
-            <div className="opacity-90 mt-1">PHP, Node.js, Angular, React</div>
+            <div className="opacity-90 mt-1">PHP, Java, Node.js, Angular, React</div>
           </div>
           <div className="bg-white/10 rounded-lg p-4">
             <div className="text-3xl mb-2">🏗️</div>

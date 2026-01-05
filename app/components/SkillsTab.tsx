@@ -38,7 +38,7 @@ const skillCategories = [
   {
     title: 'Programming Languages',
     icon: '💻',
-    skills: ['JavaScript', 'Node.js', 'PHP', 'HTML5', 'CSS3', 'TypeScript'],
+    skills: ['JavaScript', 'Node.js', 'PHP', 'Java', 'HTML5', 'CSS3', 'TypeScript'],
     color: 'from-blue-500 to-cyan-500',
   },
   {
@@ -50,7 +50,7 @@ const skillCategories = [
   {
     title: 'Backend Frameworks',
     icon: '⚙️',
-    skills: ['Laravel', 'Laminas Mezzio', 'Symfony', 'Express.js', 'Restler'],
+    skills: ['Laravel', 'Laminas Mezzio', 'Symfony', 'Spring Boot', 'Express.js', 'Restler'],
     color: 'from-purple-500 to-indigo-500',
   },
   {

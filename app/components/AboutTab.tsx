@@ -175,7 +175,7 @@ export default function AboutTab() {
         <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
           My expertise spans across the entire technology stack, from designing intuitive user 
           interfaces with Angular, Vue.js, and React, to architecting robust backend systems using 
-          PHP, Node.js, and various database technologies. I'm passionate about implementing DevOps 
+          PHP, Java, Node.js, and various database technologies. I'm passionate about implementing DevOps 
           practices, containerization with Docker and Kubernetes, and leveraging AWS cloud services 
           to deliver scalable solutions.
         </p>

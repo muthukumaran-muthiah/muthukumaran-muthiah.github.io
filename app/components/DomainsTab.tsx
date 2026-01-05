@@ -41,7 +41,7 @@ const domains = [
     icon: '🌐',
     gradient: 'from-blue-500 to-cyan-500',
     expertise: ['Frontend Development', 'Backend APIs', 'Database Design', 'UI/UX Implementation'],
-    technologies: ['Angular', 'Vue.js', 'React', 'Node.js', 'PHP', 'Laravel'],
+    technologies: ['Angular', 'Vue.js', 'React', 'Node.js', 'PHP', 'Java', 'Laravel', 'Spring Boot'],
   },
   {
     title: 'Cloud Architecture & DevOps',
