@@ -1,0 +1,61 @@
+Jan2025 – Present: Trainer Management System (TMS)
+Technologies: PHP (Symfony 1 & 3), Angular, Node.js, MySQL, AWS Cognito, EKS, Kubernetes, HELM, Streamnative (Kafka)
+❖ Working on a Trainer Management System (TMS) responsible for managing trainer–learner mappings, course scheduling,
+and billing/reporting workflows.
+❖ The system consists of two Symfony-based frameworks (v1 and v2) and uses Angular for the frontend and Node.js for
+supporting services.
+❖ Integrated AWS Cognito for Single Sign-On (SSO) to streamline authentication and identity management across the platform.
+❖ Deployed the application on AWS EKS using Kubernetes and HELM for orchestration and configuration management.
+Dec 2022 - Oct 2024: Licensing
+Technologies: PHP, Laminas Mezzio, AWS SDK, PostgreSQL, EventstoreDB, HELM, K8s, Minikube
+❖ Created a licensing service responsible for learner onboarding and license provisioning, utilizing Event Sourcing and CQRS
+design patterns.
+❖ Conducted an initial proof of concept (POC) based on the above design patterns and provided team training.
+❖ Developed High-Level Design (HLD) and Low-Level Design (LLD) documents, and integrated the service with HELM and K8s.
+Dec 2022 – Jan 2025: Fulfillment Service
+Technologies: Node.js, MongoDB, Mongoose, AWS Lambda, AWS SDK, HELM, K8s, Minikube
+❖ Developed services to facilitate course purchases and management for learners, including payment processing, order detail
+synchronization with Salesforce, and user/license management.
+❖ Implemented asynchronous communication between services using RabbitMQ, incorporating a Dead Letter Queue (DLQ) for
+failure management.
+Dec 2022 - Nov 2023: Enablement API Service
+Technologies: PHP, Luracast-Restler, Laminas Mezzio, MySQL, MSSQL, AWS SDK, K8
+❖ Designed an API to handle enablement activities such as learner registration and login, serving as a core API for other
+services.
+❖ Led the migration of the API to a modern framework, Laminas-Mezzio, and played a pivotal role in transitioning to K8s.
+July 2022 - Dec 2022: FMS (File Management System)
+Technologies: Vue.js, Quasar, Laravel, PostgreSQL, PHP, HTML, CSS, JavaScript
+❖ Developed a cloud-based file sharing system for cross-platform use (web, Android, and iOS) from scratch, tailored to client
+specifications.
+❖ Created an initial proof of concept using Quasar, currently in mid-development phase.
+April 2022 - June 2022: Tabetan
+Technologies: Vue.js, HTML, CSS, JavaScript, Firebase
+❖ Developed a chat application connecting users with nutritionists, integrating it with the existing Palmo application.
+❖ Responsible for implementing core features, particularly the chat interface.
+August 2021 - March 2022: Migration Assistant
+Technologies: Vue.js, Node.js, HTML, CSS, JavaScript, MySQL
+❖ Built a migration tool to securely share sensitive data with third-party service providers while masking usernames, emails,
+and mobile numbers through methods like encryption and pseudonymization.
+June 2021 - August 2021: Palmo
+Technologies: PHP, Laravel, Vue.js, HTML, CSS, JavaScript, MySQL
+❖ Created an indoor food ordering system that allows customers to order via QR codes, developed with Laravel and MySQL for
+backend management and Vue.js for the front-end interface.
+May 2021 - June 2021: Pest Control System
+Technologies: PHP, Laravel, HTML, CSS, JavaScript, MySQL
+❖ Developed a tool for tracking pest-related findings in resid
+March 2021 - April 2021: Corporate Website
+Technologies: Angular, Node.js, HTML, CSS, JavaScript, MySQL
+❖ Designed and implemented a corporate website with an emphasis on interactivity and visual appeal, ensuring alignment
+with brand identity.
+Nov 2019 - Jan 2021: BPM Tool (Ranabase)
+Technologies: PHP, Laravel, HTML, CSS, JavaScript, MySQL
+❖ Developed a BPM tool that allows users to create and share process flow diagrams with various functionalities such as
+user-defined clips and issue tracking
+Aug 2019 - Oct 2019: CRM Tool
+Technologies: PHP, Laravel, HTML, CSS, JavaScript, MySQL
+❖ Created a cost-effective CRM tool from scratch, focusing on data migration from existing systems and ensuring the system
+was user-friendly for client needs.
+Jun 2019 - Sep 2019: Application Tracking API
+Technologies: JAVA, Kintone API
+❖ Initiated career with the development of an applicant tracking tool, focusing on user-friendly design and effective record
+maintenance using the Kintone Application Platform.
